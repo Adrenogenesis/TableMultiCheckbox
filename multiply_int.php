@@ -1,13 +1,21 @@
 <?php
-      for ($i = 1; $i <= 30; $i += 1){
-                 $i = rand(1, 30);
-                 $j= rand(1,10);
+           for ($i = 1; $i <= 10; $i += 1){
+                $i = rand(1, 10);
+                $j=$_POST['calc'];
+            
     Echo 'Table de multiplication de '.$j.'<br>';
        
         echo $i.' x '.$j.' = '.$i*$j.'<br>';
-    
+        $result = $i*$j;
+        break;
 }
-
-// $items = Array(523,3452,334,31,...5346);
-// echo $items[array_rand($items)];
-?>
+     echo $_POST["data"];
+                 if ($_POST["data"] == $result)
+                       {
+                           echo "Vous avez gagné !";
+                       }
+                       else
+                       {
+                            echo "Vous avez perdu !";
+                       }
+      ?>

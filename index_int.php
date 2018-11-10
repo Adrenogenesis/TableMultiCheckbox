@@ -9,56 +9,28 @@
 <body>
 <div class="flex-container">
     <h1>Table de multiplication</h1>
-  
-                            <br>
-                            <form name="calc" method="post" action="">
-                 
-                                                <input type="radio" name="table[]" id="tab1" value="1" >
-                                                <label for="table">Table 1</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab2" value="2" >
-                                                <label for="table">Table 2</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab3" value="3">
-                                                <label for="table">Table 3</label>
-                                                <br >
-                                                <input type="radio" name="table[]" id="tab4" value="4" >
-                                                <label for="table">Table 4</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab5" value="5" >
-                                                <label for="table">Table 5</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab6" value="6" >
-                                                <label for="table">Table 6</label>
-                                                <br >
-                                                <input type="radio" name="table[]" id="tab7" value="7" >
-                                                <label for="table">Table 7</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab8" value="8" >
-                                                <label for="table">Table 8</label>
-                                                <br>
-                                                <input type="radio" name="table[]" id="tab9" value="9" >
-                                                <label for="table">Table 9</label>
-                                                <br >
-                                                <input type="radio" name="table[]" id="tab10" value="10" >
-                                                <label for="table">Table 10</label>
-                                                <br >
-                                        
-                                           <br>
-                                        <input type="submit" name="submit" value="Voir">
-                                </form>
+                              <br>
+                            <form method="post" action="">
                                 
-      
-                        <div class="results">
-                        
-                        
-                        <?php
-                        foreach($_POST['table'] as $valeur)
-                        {
-                           echo "La checkbox $valeur a été cochée<br>";
-                        }
-                       
-include 'multiply_int_array.php'
+                                <select  id="calc" name="calc" size="1">
+                                         <option id="tab1" value="1">Table 1</option>
+                                         <option id="tab2" value="2">Table 2</option>
+                                         <option id="tab3" value="3">Table 3</option>
+                                         <option id="tab4" value="4">Table 4</option>
+                                         <option id="tab5" value="5">Table 5</option>
+                                         <option id="tab6" value="6">Table 6</option>
+                                         <option id="tab7" value="7">Table 7</option>
+                                         <option id="tab8" value="8">Table 8</option>
+                                         <option id="tab9" value="9">Table 9</option>
+                                         <option id="tab10" value="10">Table 10</option>
+                                 </select>
+                                 <br>
+                                 <input type="number" name="data" value="Réponse">
+                          <input type="submit">
+                         </form>
+                   <div class="results">
+  <?php
+   include 'multiply_int.php'
 ?>
       </div>
     </div>  
